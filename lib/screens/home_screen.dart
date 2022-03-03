@@ -15,43 +15,48 @@ class HomeScreen extends StatelessWidget {
       drawer: DrawerWidget(),
       body: Column(
         children: [
-          Row(
-            children: [
-              Container(
-                //Drawer yellow container
-                alignment: Alignment(-0.5, -0.1),
-                height: MediaQuery.of(context).size.height * 0.35,
-                width: MediaQuery.of(context).size.width * 0.3,
-                decoration: ShapeDecoration(
-                    color: Color.fromRGBO(239, 210, 61, 1),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.only(
-                            topRight: Radius.elliptical(50, 300),
-                            bottomRight: Radius.elliptical(600, 1000)))),
-                child: IconButton(
-                  //Drawer Icon
-                  icon: Icon(
-                    Icons.dehaze,
-                  ),
-                  onPressed: () {
-                    _scaffoldKey.currentState!.openDrawer();
-                  },
-                  color: Colors.white,
-                ),
-              ),
-              Expanded(
-                //Image NetFarma
-                child: Align(
-                  alignment: Alignment(-0.8, -1),
-                  child: Image(
-                    alignment: Alignment.topCenter,
-                    image: AssetImage("images/logo.png"),
-                    height: MediaQuery.of(context).size.height * 0.2,
-                    width: MediaQuery.of(context).size.width * 0.4,
+          Expanded(
+            child: Row(
+              children: [
+                Align(
+                  alignment: Alignment(-1, -1),
+                  child: Container(
+                    //Drawer yellow container
+                    alignment: Alignment(-0.5, -0.1),
+                    height: MediaQuery.of(context).size.height * 0.35,
+                    width: MediaQuery.of(context).size.width * 0.3,
+                    decoration: ShapeDecoration(
+                        color: Color.fromRGBO(239, 210, 61, 1),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.only(
+                                topRight: Radius.elliptical(50, 300),
+                                bottomRight: Radius.elliptical(600, 1000)))),
+                    child: IconButton(
+                      //Drawer Icon
+                      icon: Icon(
+                        Icons.dehaze,
+                      ),
+                      onPressed: () {
+                        _scaffoldKey.currentState!.openDrawer();
+                      },
+                      color: Colors.white,
+                    ),
                   ),
                 ),
-              ),
-            ],
+                Expanded(
+                  //Image NetFarma
+                  child: Align(
+                    alignment: Alignment(-0.8, -0.8),
+                    child: Image(
+                      alignment: Alignment.topCenter,
+                      image: AssetImage("images/logo.png"),
+                      height: MediaQuery.of(context).size.height * 0.2,
+                      width: MediaQuery.of(context).size.width * 0.4,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
           ButtonWidget(
             text: "Register",

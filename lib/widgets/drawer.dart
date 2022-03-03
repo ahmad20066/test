@@ -71,7 +71,7 @@ class DrawerWidget extends StatelessWidget {
               Expanded(
                 child: Align(
                   alignment: Alignment(-0.8, 0.5),
-                  child: Container(
+                  child: SizedBox(
                     height: 62,
                     width: 230,
                     child: Text(
