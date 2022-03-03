@@ -90,6 +90,9 @@ class HomeScreen extends StatelessWidget {
             text: "Invite someone",
             width: 335,
             height: 56,
+          ),
+          SizedBox(
+            height: 30,
           )
         ],
       ),
